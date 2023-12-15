@@ -2,26 +2,45 @@
 //It must be loaded from index.html
 //It assumes that the file "myPalettes.js" has also been loaded
 
-let currentPalette;
+
 
 function setup() {
     createCanvas(windowWidth, windowHeight / 2);
-    currentPalette = randomPalette();
-    noStroke();
-    background("white");
+    
+    background("blue");
 }
 
 function draw() {
-    fill(random(currentPalette));
-    const x = random(0, width);
-    const y = random(0, height);
-    circle(x, y, 100);
+
+    
+    circle(20, 40, 100);
 }
 
 function mouseClicked() {
-    background(255);
-    currentPalette = randomPalette();
+   
+   circle(100,80,20);
+	circle(300,60,20);
+	circle(250,40,20);
+	circle(150,25,20);
+	circle(40,38,20);
+	circle(45,120,20);
+	circle(320,115,20);
+	circle(330,38,20);
+	circle(480,38,20);
+	circle(330,65,20);
+	circle(630,55,20);
+	circle(720,80,20);
+	circle(460,60,20);
+	circle(573,38,20);
+	circle(788,23,20);
+	circle(627,120,20);
+	circle(698,60,20);
+	circle(400,88,20);
+	circle(227,40,20);
+	circle(280,88,20);
+	
 }
+
 
 function keyPressed() {
     if (key === "s") {
