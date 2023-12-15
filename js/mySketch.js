@@ -2,19 +2,38 @@
 //It must be loaded from index.html
 //It assumes that the file "myPalettes.js" has also been loaded
 
-
+let xCentre = 200
+let yCentre = 100
 
 function setup() {
     createCanvas(windowWidth, windowHeight / 2);
-    
-    background("blue");
+
+    background("skyblue");
+	noLoop();
+	
+	cloud (100,50);
+	cloud (300,70);
+	cloud2 (450,60);
+	cloud (700,50);
+	
+	fill ("white");
+	noStroke();
+	rect (0,500,800,500)
 }
+
 
 function draw() {
-
-    
-    circle(20, 40, 100);
+	noStroke()
+//Snowman 1
+	head();
+	eyes();
+	nose();
+	body();
+	bellyButton();
+	scarf();
 }
+
+
 
 function mouseClicked() {
    
@@ -46,4 +65,58 @@ function keyPressed() {
     if (key === "s") {
         save("my-p5-screenshot");
     }
+}
+
+
+function head() {
+    fill("white")
+    circle(xCentre + 0, yCentre + 0, 100);
+}
+
+function eyes() {
+    fill("#353b48")
+    circle(xCentre - 20, yCentre - 15, 10);
+    circle(xCentre + 20, yCentre - 15, 10);
+}
+
+function nose() {
+    fill("#ff9a76")
+    circle(xCentre + 0, yCentre + 15, 30);
+}
+
+function body() {
+    fill("white")
+    circle(xCentre + 0, yCentre + 135, 170);
+    fill(255, 255, 255);
+}
+
+function bellyButton() {
+    fill("#353b48")
+    circle(xCentre + 0, yCentre + 115, 10);
+    circle(xCentre + 0, yCentre + 135, 10);
+    circle(xCentre + 0, yCentre + 155, 10);
+}
+
+function scarf() {
+    fill("red");
+    rectMode(CENTER)
+    rect(xCentre - 20, yCentre + 50, 120, 15, 15);
+}
+
+
+function cloud (Xposition,Yposition) {
+fill ("white");
+stroke ("white");
+ellipse (Xposition, Yposition, 65);
+ellipse (Xposition+32, Yposition+10 ,45);
+ellipse (Xposition-32, Yposition+10 ,45)
+
+}
+
+function cloud2 (Xposition,Yposition) {
+fill("white");
+stroke ("white");
+ellipse (Xposition, Yposition, 45);
+ellipse (Xposition+25, Yposition+5 ,32);
+ellipse (Xposition-25, Yposition+5 ,32)
 }
