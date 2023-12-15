@@ -36,7 +36,7 @@ function draw() {
 
 
 function mouseClicked() {
-   
+   fill ("white")
    circle(100,80,20);
 	circle(300,60,20);
 	circle(250,40,20);
